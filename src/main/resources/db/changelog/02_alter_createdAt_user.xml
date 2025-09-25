@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="update-created-data" author="Dinesh Chand">
+        <update tableName="users">
+            <column name="created_at" value="2023-10-01T00:00:00Z"/>
+            <column name="updated_at" value="2023-10-01T00:00:00Z"/>
+            <where>created_at IS NULL OR updated_at IS NULL</where>
+        </update>
+
+    </changeSet>
+
+</databaseChangeLog>
